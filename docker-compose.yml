@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  web:
+    build: ./batch
+    command: bash -c "export FLASK_APP=./jsonsearch_api/controller/JsonDataController.py && python -m flask run --host=0.0.0.0"
+    environment:
+      - "PYTHONUNBUFFERED=1"
+      - "HOST_ADDRESS=elasticsearch"
+      - "PORT=9200"
+      - "LOG_DIR=logs"
+      - "LOG_LEVEL=DEBUG"
+      - "CONSOLE_LEVEL=DEBUG"
+    volumes:
+      - ./batch:/code
+    ports:
+      - "5000:5000"
+    depends_on:
+      - elasticsearch
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+    expose:
+      - "9200"
+

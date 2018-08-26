@@ -1,0 +1,206 @@
+2018-08-19 18:09:49,595 - 29 - DEBUG    - LoggerConfig.py - f3 - application started
+2018-08-19 18:09:49,608 - 88 - INFO     - _internal.py - _log -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2018-08-19 18:10:23,788 - 31 - INFO     - JsonDataController.py - get - get Data vig
+2018-08-19 18:10:23,790 - 40 - INFO     - payloadDataPersist.py - searchJsonElasticData - fetching the indexed data using vig
+2018-08-19 18:10:23,791 - 205 - DEBUG    - connectionpool.py - _new_conn - Starting new HTTP connection (1): elasticsearch:9200
+2018-08-19 18:10:23,983 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "GET /stuname/_search?sort=score%3Adesc HTTP/1.1" 200 765
+2018-08-19 18:10:23,984 - 83 - INFO     - base.py - log_request_success - GET http://elasticsearch:9200/stuname/_search?sort=score%3Adesc [status:200 request:0.194s]
+2018-08-19 18:10:23,984 - 85 - DEBUG    - base.py - log_request_success - > {"query":{"regexp":{"name":"vig[a-z]+|([a-z])+_vig[a-z]*"}}}
+2018-08-19 18:10:23,984 - 86 - DEBUG    - base.py - log_request_success - < {"took":111,"timed_out":false,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0},"hits":{"total":5,"max_score":null,"hits":[{"_index":"stuname","_type":"studentNames","_id":"5","_score":null,"_source":{"name":"vrgr_vignesh","score":1200},"sort":[1200]},{"_index":"stuname","_type":"studentNames","_id":"1","_score":null,"_source":{"name":"surrou_vignesh","score":900},"sort":[900]},{"_index":"stuname","_type":"studentNames","_id":"0","_score":null,"_source":{"name":"surrou_vig","score":700},"sort":[700]},{"_index":"stuname","_type":"studentNames","_id":"3","_score":null,"_source":{"name":"vigneshwar","score":200},"sort":[200]},{"_index":"stuname","_type":"studentNames","_id":"2","_score":null,"_source":{"name":"vignesh","score":100},"sort":[100]}]}}
+2018-08-19 18:10:23,985 - 48 - INFO     - payloadDataPersist.py - searchJsonElasticData - fetched the data using total data no :5
+2018-08-19 18:10:23,985 - 39 - INFO     - JsonDataController.py - get - get Data 5
+2018-08-19 18:10:23,986 - 88 - INFO     - _internal.py - _log - 172.20.0.1 - - [19/Aug/2018 18:10:23] "GET /names_score_data?searchData=vig HTTP/1.1" 200 -
+2018-08-19 19:27:37,634 - 29 - DEBUG    - LoggerConfig.py - f3 - application started
+2018-08-19 19:27:37,642 - 88 - INFO     - _internal.py - _log -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2018-08-19 19:28:31,679 - 50 - INFO     - JsonDataController.py - post - post data b'{\n\t"surrou_vig":700,\n\t"surrou_vignesh":900,\n\t"vignesh":100,\n\t"vigneshwar":200,\n\t"venkavig":1000,\n\t"vrgr_vignesh":1200,\n\t"_vignesh":1500\n\n}' 
+2018-08-19 19:28:31,681 - 57 - ERROR    - JsonDataController.py - post - Exception occured during dumping name 's' is not defined
+2018-08-19 19:28:31,684 - 88 - INFO     - _internal.py - _log - 172.20.0.1 - - [19/Aug/2018 19:28:31] "POST /names_score_data HTTP/1.1" 500 -
+2018-08-19 19:31:41,984 - 29 - DEBUG    - LoggerConfig.py - f3 - application started
+2018-08-19 19:31:41,993 - 88 - INFO     - _internal.py - _log -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2018-08-19 19:32:09,909 - 50 - INFO     - JsonDataController.py - post - post data b'{\n\t"surrou_vig":700,\n\t"surrou_vignesh":900,\n\t"vignesh":100,\n\t"vigneshwar":200,\n\t"venkavig":1000,\n\t"vrgr_vignesh":1200,\n\t"_vignesh":1500\n\n}' 
+2018-08-19 19:32:09,913 - 58 - ERROR    - JsonDataController.py - post - Exception occured during dumping name 's' is not defined
+2018-08-19 19:32:09,914 - 88 - INFO     - _internal.py - _log - 172.20.0.1 - - [19/Aug/2018 19:32:09] "POST /names_score_data HTTP/1.1" 500 -
+2018-08-19 19:34:42,580 - 29 - DEBUG    - LoggerConfig.py - f3 - application started
+2018-08-19 19:34:42,606 - 88 - INFO     - _internal.py - _log -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2018-08-19 19:37:02,161 - 50 - INFO     - JsonDataController.py - post - post data b'{\n\t"surrou_vig":700,\n\t"surrou_vignesh":900,\n\t"vignesh":100,\n\t"vigneshwar":200,\n\t"venkavig":1000,\n\t"vrgr_vignesh":1200,\n\t"_vignesh":1500\n\n}' 
+2018-08-19 19:37:02,171 - 28 - INFO     - payloadDataPersist.py - dumpJsonElasticSearchData - dumping the json mapData {'surrou_vig': 700, 'surrou_vignesh': 900, 'vignesh': 100, 'vigneshwar': 200, 'venkavig': 1000, 'vrgr_vignesh': 1200, '_vignesh': 1500}
+2018-08-19 19:37:02,171 - 205 - DEBUG    - connectionpool.py - _new_conn - Starting new HTTP connection (1): elasticsearch:9200
+2018-08-19 19:37:02,331 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/0 HTTP/1.1" 200 164
+2018-08-19 19:37:02,332 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/0 [status:200 request:0.160s]
+2018-08-19 19:37:02,332 - 85 - DEBUG    - base.py - log_request_success - > {"name":"surrou_vig","score":700}
+2018-08-19 19:37:02,332 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"0","_version":8,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":7,"_primary_term":44}
+2018-08-19 19:37:02,354 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/1 HTTP/1.1" 200 164
+2018-08-19 19:37:02,354 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/1 [status:200 request:0.022s]
+2018-08-19 19:37:02,354 - 85 - DEBUG    - base.py - log_request_success - > {"name":"surrou_vignesh","score":900}
+2018-08-19 19:37:02,354 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"1","_version":8,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":7,"_primary_term":44}
+2018-08-19 19:37:02,381 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/2 HTTP/1.1" 200 165
+2018-08-19 19:37:02,382 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/2 [status:200 request:0.025s]
+2018-08-19 19:37:02,382 - 85 - DEBUG    - base.py - log_request_success - > {"name":"vignesh","score":100}
+2018-08-19 19:37:02,382 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"2","_version":8,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":21,"_primary_term":44}
+2018-08-19 19:37:02,403 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/3 HTTP/1.1" 200 164
+2018-08-19 19:37:02,404 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/3 [status:200 request:0.022s]
+2018-08-19 19:37:02,404 - 85 - DEBUG    - base.py - log_request_success - > {"name":"vigneshwar","score":200}
+2018-08-19 19:37:02,404 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"3","_version":8,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":7,"_primary_term":44}
+2018-08-19 19:37:02,429 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/4 HTTP/1.1" 200 165
+2018-08-19 19:37:02,430 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/4 [status:200 request:0.025s]
+2018-08-19 19:37:02,430 - 85 - DEBUG    - base.py - log_request_success - > {"name":"venkavig","score":1000}
+2018-08-19 19:37:02,430 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"4","_version":8,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":22,"_primary_term":44}
+2018-08-19 19:37:02,450 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/5 HTTP/1.1" 200 164
+2018-08-19 19:37:02,451 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/5 [status:200 request:0.020s]
+2018-08-19 19:37:02,451 - 85 - DEBUG    - base.py - log_request_success - > {"name":"vrgr_vignesh","score":1200}
+2018-08-19 19:37:02,451 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"5","_version":8,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":7,"_primary_term":44}
+2018-08-19 19:37:02,476 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/6 HTTP/1.1" 200 165
+2018-08-19 19:37:02,477 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/6 [status:200 request:0.026s]
+2018-08-19 19:37:02,478 - 85 - DEBUG    - base.py - log_request_success - > {"name":"_vignesh","score":1500}
+2018-08-19 19:37:02,478 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"6","_version":8,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":23,"_primary_term":44}
+2018-08-19 19:37:02,533 - 54 - INFO     - JsonDataController.py - post - dump data completed - length 7 
+2018-08-19 19:37:02,534 - 88 - INFO     - _internal.py - _log - 172.20.0.1 - - [19/Aug/2018 19:37:02] "POST /names_score_data HTTP/1.1" 201 -
+2018-08-19 19:38:18,492 - 50 - INFO     - JsonDataController.py - post - post data b'{\r\n\t"govind":701,\r\n\t"govind1":901,\r\n\t"govind2":101,\r\n\t"govind3":201,\r\n\t"govind4":1001,\r\n\t"govind5":1201,\r\n\t"govind6":1501\r\n\r\n}' 
+2018-08-19 19:38:18,493 - 28 - INFO     - payloadDataPersist.py - dumpJsonElasticSearchData - dumping the json mapData {'govind': 701, 'govind1': 901, 'govind2': 101, 'govind3': 201, 'govind4': 1001, 'govind5': 1201, 'govind6': 1501}
+2018-08-19 19:38:18,494 - 205 - DEBUG    - connectionpool.py - _new_conn - Starting new HTTP connection (1): elasticsearch:9200
+2018-08-19 19:38:18,553 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/7 HTTP/1.1" 201 164
+2018-08-19 19:38:18,554 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/7 [status:201 request:0.061s]
+2018-08-19 19:38:18,555 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind","score":701}
+2018-08-19 19:38:18,556 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"7","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":8,"_primary_term":44}
+2018-08-19 19:38:18,585 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/8 HTTP/1.1" 201 164
+2018-08-19 19:38:18,587 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/8 [status:201 request:0.029s]
+2018-08-19 19:38:18,588 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind1","score":901}
+2018-08-19 19:38:18,589 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"8","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":8,"_primary_term":44}
+2018-08-19 19:38:18,610 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/9 HTTP/1.1" 201 164
+2018-08-19 19:38:18,611 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/9 [status:201 request:0.021s]
+2018-08-19 19:38:18,612 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind2","score":101}
+2018-08-19 19:38:18,613 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"9","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":9,"_primary_term":44}
+2018-08-19 19:38:18,647 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/10 HTTP/1.1" 201 166
+2018-08-19 19:38:18,659 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/10 [status:201 request:0.045s]
+2018-08-19 19:38:18,660 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind3","score":201}
+2018-08-19 19:38:18,661 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"10","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":10,"_primary_term":44}
+2018-08-19 19:38:18,679 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/11 HTTP/1.1" 201 165
+2018-08-19 19:38:18,680 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/11 [status:201 request:0.018s]
+2018-08-19 19:38:18,684 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind4","score":1001}
+2018-08-19 19:38:18,691 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"11","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":8,"_primary_term":44}
+2018-08-19 19:38:18,736 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/12 HTTP/1.1" 201 166
+2018-08-19 19:38:18,737 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/12 [status:201 request:0.045s]
+2018-08-19 19:38:18,738 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind5","score":1201}
+2018-08-19 19:38:18,739 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"12","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":11,"_primary_term":44}
+2018-08-19 19:38:18,759 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/13 HTTP/1.1" 201 165
+2018-08-19 19:38:18,760 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/13 [status:201 request:0.020s]
+2018-08-19 19:38:18,762 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind6","score":1501}
+2018-08-19 19:38:18,763 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"13","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":9,"_primary_term":44}
+2018-08-19 19:38:18,781 - 54 - INFO     - JsonDataController.py - post - dump data completed - length 7 
+2018-08-19 19:38:18,786 - 88 - INFO     - _internal.py - _log - 172.20.0.1 - - [19/Aug/2018 19:38:18] "POST /names_score_data HTTP/1.1" 201 -
+2018-08-19 19:40:36,018 - 29 - DEBUG    - LoggerConfig.py - f3 - application started
+2018-08-19 19:40:36,036 - 88 - INFO     - _internal.py - _log -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2018-08-19 19:41:20,076 - 50 - INFO     - JsonDataController.py - post - post data b'{\r\n\t"surrou_vig":700,\r\n\t"surrou_vignesh":900,\r\n\t"vignesh":100,\r\n\t"vigneshwar":200,\r\n\t"venkavig":1000,\r\n\t"vrgr_vignesh":1200,\r\n\t"_vignesh":1500\r\n\r\n}' 
+2018-08-19 19:41:20,088 - 28 - INFO     - payloadDataPersist.py - dumpJsonElasticSearchData - dumping the json mapData {'surrou_vig': 700, 'surrou_vignesh': 900, 'vignesh': 100, 'vigneshwar': 200, 'venkavig': 1000, 'vrgr_vignesh': 1200, '_vignesh': 1500}
+2018-08-19 19:41:20,093 - 205 - DEBUG    - connectionpool.py - _new_conn - Starting new HTTP connection (1): elasticsearch:9200
+2018-08-19 19:41:20,340 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/0 HTTP/1.1" 200 164
+2018-08-19 19:41:20,341 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/0 [status:200 request:0.249s]
+2018-08-19 19:41:20,342 - 85 - DEBUG    - base.py - log_request_success - > {"name":"surrou_vig","score":700}
+2018-08-19 19:41:20,343 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"0","_version":9,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":8,"_primary_term":45}
+2018-08-19 19:41:20,371 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/1 HTTP/1.1" 200 165
+2018-08-19 19:41:20,373 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/1 [status:200 request:0.028s]
+2018-08-19 19:41:20,374 - 85 - DEBUG    - base.py - log_request_success - > {"name":"surrou_vignesh","score":900}
+2018-08-19 19:41:20,375 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"1","_version":9,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":10,"_primary_term":45}
+2018-08-19 19:41:20,395 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/2 HTTP/1.1" 200 165
+2018-08-19 19:41:20,396 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/2 [status:200 request:0.020s]
+2018-08-19 19:41:20,397 - 85 - DEBUG    - base.py - log_request_success - > {"name":"vignesh","score":100}
+2018-08-19 19:41:20,398 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"2","_version":9,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":24,"_primary_term":45}
+2018-08-19 19:41:20,415 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/3 HTTP/1.1" 200 164
+2018-08-19 19:41:20,416 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/3 [status:200 request:0.016s]
+2018-08-19 19:41:20,419 - 85 - DEBUG    - base.py - log_request_success - > {"name":"vigneshwar","score":200}
+2018-08-19 19:41:20,421 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"3","_version":9,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":9,"_primary_term":45}
+2018-08-19 19:41:20,444 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/4 HTTP/1.1" 200 165
+2018-08-19 19:41:20,445 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/4 [status:200 request:0.022s]
+2018-08-19 19:41:20,447 - 85 - DEBUG    - base.py - log_request_success - > {"name":"venkavig","score":1000}
+2018-08-19 19:41:20,448 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"4","_version":9,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":25,"_primary_term":45}
+2018-08-19 19:41:20,465 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/5 HTTP/1.1" 200 165
+2018-08-19 19:41:20,466 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/5 [status:200 request:0.017s]
+2018-08-19 19:41:20,467 - 85 - DEBUG    - base.py - log_request_success - > {"name":"vrgr_vignesh","score":1200}
+2018-08-19 19:41:20,468 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"5","_version":9,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":12,"_primary_term":45}
+2018-08-19 19:41:20,490 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/6 HTTP/1.1" 200 165
+2018-08-19 19:41:20,492 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/6 [status:200 request:0.023s]
+2018-08-19 19:41:20,493 - 85 - DEBUG    - base.py - log_request_success - > {"name":"_vignesh","score":1500}
+2018-08-19 19:41:20,495 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"6","_version":9,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":26,"_primary_term":45}
+2018-08-19 19:41:20,496 - 33 - INFO     - payloadDataPersist.py - dumpJsonElasticSearchData - dumped the json data, total indexed data: 7
+2018-08-19 19:41:20,497 - 54 - INFO     - JsonDataController.py - post - dump data completed - length 7 
+2018-08-19 19:41:20,498 - 88 - INFO     - _internal.py - _log - 172.20.0.1 - - [19/Aug/2018 19:41:20] "POST /names_score_data HTTP/1.1" 201 -
+2018-08-19 19:41:43,872 - 50 - INFO     - JsonDataController.py - post - post data b'{\r\n\t"govind":701,\r\n\t"govind1":901,\r\n\t"govind2":101,\r\n\t"govind3":201,\r\n\t"govind4":1001,\r\n\t"govind5":1201,\r\n\t"govind6":1501\r\n\r\n}' 
+2018-08-19 19:41:43,881 - 28 - INFO     - payloadDataPersist.py - dumpJsonElasticSearchData - dumping the json mapData {'govind': 701, 'govind1': 901, 'govind2': 101, 'govind3': 201, 'govind4': 1001, 'govind5': 1201, 'govind6': 1501}
+2018-08-19 19:41:43,882 - 205 - DEBUG    - connectionpool.py - _new_conn - Starting new HTTP connection (1): elasticsearch:9200
+2018-08-19 19:41:43,927 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/7 HTTP/1.1" 200 165
+2018-08-19 19:41:43,929 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/7 [status:200 request:0.047s]
+2018-08-19 19:41:43,930 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind","score":701}
+2018-08-19 19:41:43,930 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"7","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":11,"_primary_term":45}
+2018-08-19 19:41:43,960 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/8 HTTP/1.1" 200 165
+2018-08-19 19:41:43,961 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/8 [status:200 request:0.029s]
+2018-08-19 19:41:43,962 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind1","score":901}
+2018-08-19 19:41:43,962 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"8","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":13,"_primary_term":45}
+2018-08-19 19:41:43,988 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/9 HTTP/1.1" 200 165
+2018-08-19 19:41:43,991 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/9 [status:200 request:0.027s]
+2018-08-19 19:41:43,992 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind2","score":101}
+2018-08-19 19:41:43,993 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"9","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":14,"_primary_term":45}
+2018-08-19 19:41:44,016 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/10 HTTP/1.1" 200 166
+2018-08-19 19:41:44,019 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/10 [status:200 request:0.025s]
+2018-08-19 19:41:44,020 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind3","score":201}
+2018-08-19 19:41:44,021 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"10","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":15,"_primary_term":45}
+2018-08-19 19:41:44,049 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/11 HTTP/1.1" 200 166
+2018-08-19 19:41:44,050 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/11 [status:200 request:0.028s]
+2018-08-19 19:41:44,052 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind4","score":1001}
+2018-08-19 19:41:44,054 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"11","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":10,"_primary_term":45}
+2018-08-19 19:41:44,082 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/12 HTTP/1.1" 200 166
+2018-08-19 19:41:44,083 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/12 [status:200 request:0.023s]
+2018-08-19 19:41:44,084 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind5","score":1201}
+2018-08-19 19:41:44,086 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"12","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":16,"_primary_term":45}
+2018-08-19 19:41:44,114 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/13 HTTP/1.1" 200 166
+2018-08-19 19:41:44,116 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/13 [status:200 request:0.027s]
+2018-08-19 19:41:44,117 - 85 - DEBUG    - base.py - log_request_success - > {"name":"govind6","score":1501}
+2018-08-19 19:41:44,120 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"13","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":12,"_primary_term":45}
+2018-08-19 19:41:44,121 - 33 - INFO     - payloadDataPersist.py - dumpJsonElasticSearchData - dumped the json data, total indexed data: 14
+2018-08-19 19:41:44,122 - 54 - INFO     - JsonDataController.py - post - dump data completed - length 7 
+2018-08-19 19:41:44,123 - 88 - INFO     - _internal.py - _log - 172.20.0.1 - - [19/Aug/2018 19:41:44] "POST /names_score_data HTTP/1.1" 201 -
+2018-08-19 19:52:42,209 - 29 - DEBUG    - LoggerConfig.py - f3 - application started
+2018-08-19 19:52:42,237 - 88 - INFO     - _internal.py - _log -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2018-08-19 19:53:21,740 - 31 - INFO     - JsonDataController.py - get - get Data vig
+2018-08-19 19:53:21,741 - 41 - INFO     - payloadDataPersist.py - searchJsonElasticData - fetching the indexed data using vig
+2018-08-19 19:53:21,741 - 205 - DEBUG    - connectionpool.py - _new_conn - Starting new HTTP connection (1): elasticsearch:9200
+2018-08-19 19:53:21,931 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "GET /stuname/_search?sort=score%3Adesc HTTP/1.1" 200 764
+2018-08-19 19:53:21,932 - 83 - INFO     - base.py - log_request_success - GET http://elasticsearch:9200/stuname/_search?sort=score%3Adesc [status:200 request:0.191s]
+2018-08-19 19:53:21,933 - 85 - DEBUG    - base.py - log_request_success - > {"query":{"regexp":{"name":"vig[a-z]+|([a-z])+_vig[a-z]*"}}}
+2018-08-19 19:53:21,934 - 86 - DEBUG    - base.py - log_request_success - < {"took":86,"timed_out":false,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0},"hits":{"total":5,"max_score":null,"hits":[{"_index":"stuname","_type":"studentNames","_id":"5","_score":null,"_source":{"name":"vrgr_vignesh","score":1200},"sort":[1200]},{"_index":"stuname","_type":"studentNames","_id":"1","_score":null,"_source":{"name":"surrou_vignesh","score":900},"sort":[900]},{"_index":"stuname","_type":"studentNames","_id":"0","_score":null,"_source":{"name":"surrou_vig","score":700},"sort":[700]},{"_index":"stuname","_type":"studentNames","_id":"3","_score":null,"_source":{"name":"vigneshwar","score":200},"sort":[200]},{"_index":"stuname","_type":"studentNames","_id":"2","_score":null,"_source":{"name":"vignesh","score":100},"sort":[100]}]}}
+2018-08-19 19:53:21,944 - 49 - INFO     - payloadDataPersist.py - searchJsonElasticData - fetched the data using total data no :5
+2018-08-19 19:53:21,946 - 39 - INFO     - JsonDataController.py - get - get Data 5
+2018-08-19 19:53:21,949 - 88 - INFO     - _internal.py - _log - 172.20.0.1 - - [19/Aug/2018 19:53:21] "GET /names_score_data?searchData=vig HTTP/1.1" 200 -
+2018-08-19 19:56:59,737 - 50 - INFO     - JsonDataController.py - post - post data b'{\r\n\t"surrou_vig":700,\r\n\t"surrou_vignesh":900,\r\n\t"vignesh":100,\r\n\t"vigneshwar":200,\r\n\t"venkavig":1000,\r\n\t"vrgr_vignesh":1200,\r\n\t"_vignesh":1500\r\n\r\n}' 
+2018-08-19 19:56:59,740 - 28 - INFO     - payloadDataPersist.py - dumpJsonElasticSearchData - dumping the json mapData {'surrou_vig': 700, 'surrou_vignesh': 900, 'vignesh': 100, 'vigneshwar': 200, 'venkavig': 1000, 'vrgr_vignesh': 1200, '_vignesh': 1500}
+2018-08-19 19:56:59,751 - 205 - DEBUG    - connectionpool.py - _new_conn - Starting new HTTP connection (1): elasticsearch:9200
+2018-08-19 19:56:59,882 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/0 HTTP/1.1" 200 165
+2018-08-19 19:56:59,884 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/0 [status:200 request:0.133s]
+2018-08-19 19:56:59,884 - 85 - DEBUG    - base.py - log_request_success - > {"name":"surrou_vig","score":700}
+2018-08-19 19:56:59,889 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"0","_version":10,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":9,"_primary_term":46}
+2018-08-19 19:56:59,910 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/1 HTTP/1.1" 200 166
+2018-08-19 19:56:59,911 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/1 [status:200 request:0.017s]
+2018-08-19 19:56:59,913 - 85 - DEBUG    - base.py - log_request_success - > {"name":"surrou_vignesh","score":900}
+2018-08-19 19:56:59,914 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"1","_version":10,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":13,"_primary_term":46}
+2018-08-19 19:56:59,944 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/2 HTTP/1.1" 200 166
+2018-08-19 19:56:59,946 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/2 [status:200 request:0.032s]
+2018-08-19 19:56:59,947 - 85 - DEBUG    - base.py - log_request_success - > {"name":"vignesh","score":100}
+2018-08-19 19:56:59,948 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"2","_version":10,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":27,"_primary_term":46}
+2018-08-19 19:56:59,986 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/3 HTTP/1.1" 200 166
+2018-08-19 19:56:59,987 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/3 [status:200 request:0.038s]
+2018-08-19 19:56:59,987 - 85 - DEBUG    - base.py - log_request_success - > {"name":"vigneshwar","score":200}
+2018-08-19 19:56:59,988 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"3","_version":10,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":11,"_primary_term":46}
+2018-08-19 19:57:00,038 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/4 HTTP/1.1" 200 166
+2018-08-19 19:57:00,040 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/4 [status:200 request:0.051s]
+2018-08-19 19:57:00,042 - 85 - DEBUG    - base.py - log_request_success - > {"name":"venkavig","score":1000}
+2018-08-19 19:57:00,044 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"4","_version":10,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":28,"_primary_term":46}
+2018-08-19 19:57:00,078 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/5 HTTP/1.1" 200 166
+2018-08-19 19:57:00,080 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/5 [status:200 request:0.033s]
+2018-08-19 19:57:00,080 - 85 - DEBUG    - base.py - log_request_success - > {"name":"vrgr_vignesh","score":1200}
+2018-08-19 19:57:00,081 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"5","_version":10,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":17,"_primary_term":46}
+2018-08-19 19:57:00,126 - 393 - DEBUG    - connectionpool.py - _make_request - http://elasticsearch:9200 "PUT /stuname/studentNames/6 HTTP/1.1" 200 166
+2018-08-19 19:57:00,127 - 83 - INFO     - base.py - log_request_success - PUT http://elasticsearch:9200/stuname/studentNames/6 [status:200 request:0.045s]
+2018-08-19 19:57:00,127 - 85 - DEBUG    - base.py - log_request_success - > {"name":"_vignesh","score":1500}
+2018-08-19 19:57:00,128 - 86 - DEBUG    - base.py - log_request_success - < {"_index":"stuname","_type":"studentNames","_id":"6","_version":10,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":29,"_primary_term":46}
+2018-08-19 19:57:00,129 - 33 - INFO     - payloadDataPersist.py - dumpJsonElasticSearchData - dumped the json data, total indexed data: 7
+2018-08-19 19:57:00,129 - 54 - INFO     - JsonDataController.py - post - dump data completed - length 7 
+2018-08-19 19:57:00,134 - 88 - INFO     - _internal.py - _log - 172.20.0.1 - - [19/Aug/2018 19:57:00] "POST /names_score_data HTTP/1.1" 201 -
